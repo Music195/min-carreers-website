@@ -1,15 +1,23 @@
 
-<div class="border-bottom" style="margin-bottom: 20px; padding-bottom: 10px;">
-    <h3 style="margin-top: 6px; color:rgb(120,120,120)"> {{job['title']}}</h3>
-    <div style="margin-top: 6px">
-        <b>Location:</b>  {{job['location']}}
+<div class="border-bottom row" style="margin-bottom: 20px; padding-bottom: 10px;">
+    <div class="col-10">
+        <h3 style="margin-top: 6px; color:rgb(120,120,120)"> {{job['title']}}</h3>
+        <div style="margin-top: 6px">
+            <b>Location:</b>  {{job['location']}}
+        </div>
+        {% if 'salary' in job %}
+            <div style="margin-top: 6px">
+                <b>Salary:</b>  {{job['salary']}}
+            </div>
+        {% endif %}
     </div>
-    {% if 'salary' in job %}
-    <div style="margin-top: 6px">
-        <b>Salary:</b>  {{job['salary']}}
+    <div class="col-2 ">
+        <button type="button" class="btn btn-outline-success mt-4">Apply</button>
     </div>
-    {% endif %}
 </div>
+
+
+
     
 
 <!-- To adjust indentation (index) for all code at once using keyboard, select all the code (Ctrl+A), then use Tab to indent or Shift+Tab to outdent in most code editors like VS Code, Sublime Text, or Atom. -->
