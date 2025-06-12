@@ -1,0 +1,32 @@
+
+<div class="border-bottom row" style="margin-bottom: 20px; padding-bottom: 10px;">
+    <div class="col-10">
+        <h3 style="margin-top: 6px; color:rgb(120,120,120)"> {{item['title']}}</h3>
+        <div style="margin-top: 6px">
+            <b>Description:</b>  {{item['description']}}
+        </div>
+        {% if 'cost' in item %}
+            <div style="margin-top: 6px">
+                <b>Cost:</b>  {{item['cost']}}
+            </div>
+        {% endif %}
+    </div>
+    <div class="col-2 ">
+        <a  href="{% if item['id'] == 1 %}https://learningnotebymusic.onrender.com
+                {% elif item['id'] == 2 %}#
+                {% elif item['id'] == 3 %}#
+                {% elif item['id'] == 4 %}#
+                {% elif item['id'] == 5 %}#
+                {% else %}
+                href=#
+                {% endif %}"
+            
+            type="button" class="btn btn-outline-success mt-4">Enter</a>
+    </div>
+</div>
+
+
+
+    
+
+<!-- To adjust indentation (index) for all code at once using keyboard, select all the code (Ctrl+A), then use Tab to indent or Shift+Tab to outdent in most code editors like VS Code, Sublime Text, or Atom. -->

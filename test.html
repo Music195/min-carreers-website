@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>常用対数</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 30px;
+      background: #fdfdfd;
+    }
+
+    .title-section {
+      background-color: #d90000;
+      color: white;
+      padding: 10px 20px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .title-section span {
+      font-size: 40px;
+      margin-right: 10px;
+    }
+
+    .basic-box {
+      border-left: 5px solid red;
+      padding: 10px 20px;
+      background-color: #fff;
+      margin-top: 15px;
+    }
+
+    .basic-box h3 {
+      color: red;
+      margin-top: 0;
+    }
+
+    .point {
+      margin-top: 15px;
+    }
+
+    .point h4 {
+      margin-bottom: 5px;
+    }
+
+    .explanation {
+      margin-top: 30px;
+      background-color: #e0eefe;
+      padding: 8px 15px;
+      font-weight: bold;
+      color: #003399;
+      display: inline-block;
+      border-left: 4px solid #003399;
+    }
+
+    .math-block {
+      background-color: #f3f3f3;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin: 5px 0;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="title-section">
+    <span>32</span>常用対数
+  </div>
+
+  <div class="basic-box">
+    <h3>基本事項</h3>
+
+    <div class="point">
+      <strong>1. 常用対数</strong>（10 を底とする対数 \( \log_{10}N \)）<br>
+      正の数 \( N \) は \( a \times 10^n \quad (1 \leq a &lt; 10,\ n \text{ は整数}) \) で表され、<br>
+      <div class="math-block">
+        \( \log_{10}N = n + \log_{10}a \quad \text{（ただし } 0 \leq \log_{10}a &lt; 1 \text{）} \)
+      </div>
+    </div>
+
+    <div class="point">
+      <strong>2. 正の数の整数部分の桁数、小数桁位</strong><br>
+      <ol>
+        <li>
+          \( N \) の整数部分が \( k \) 桁 ⇔ 
+          <div class="math-block">
+            \( 10^{k-1} \leq N &lt; 10^k \iff k - 1 \leq \log_{10}N &lt; k \)
+          </div>
+        </li>
+        <li>
+          \( N \) は小数第 \( k \) 位に初めて 0 でない数字が現れる ⇔
+          <div class="math-block">
+            \( \frac{1}{10^k} \leq N &lt; \frac{1}{10^{k-1}} \iff -k \leq \log_{10}N &lt; -k + 1 \)
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="explanation">■ 解説</div>
+
+</body>
+</html>

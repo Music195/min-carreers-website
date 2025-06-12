@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html >
 <head>
-    <title>win-career</title>
+    <title>{{name}}</title>
     <style>
         #win{
             width: 100%;
@@ -16,11 +16,12 @@
           rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
           crossorigin="anonymous">
 <body>
+    {% include 'navbar.html' %}
     <div class ="container">
-        <h1 class="text-center mt-5 mb-5">Welcome to {{company_name}} career</h1>
+        <h1 class="text-center mt-5 mb-5">Welcome to {{name}}</h1>
         <img class="img-fluid" id="win" src="static/win.jpg" >
         
-        <h2 class="text-center mt-3 mb-4" >About {{company_name}} Career</h2>
+        <h2 class="text-center mt-3 mb-4" >About {{name}}</h2>
         <p class="lead"> Win Career is a platform designed to help individuals enhance their career prospects 
             through various resources and tools.
             You can join any job that is fit to you and we will try our best to fulfill your request.
@@ -34,23 +35,22 @@
             Times New Roman for your blog titles, post titles etc, you will surely catch the eyes of 
             your readers.
         </p>
-        <h2 class="text-center">Open positions</h2>
+        <h2 class="text-center">{{name}}</h2>
         
-        <div class="row mt-4 mb-4"></div>
-            {% for job in jobs %}
-                {% include 'jobitems.html' %}       
+        <div class="row mt-4 mb-4">
+            {% for item in items %}
+                {% include 'items.html' %}       
             {% endfor %}
-
         </div>
         
 
         <div class="text-center">
-            <button class="btn btn-outline-info">Contact Us</button>
+            <a href="mailto:minthetkhine195@gmail.com" type="_blank" class="btn btn-outline-info">Contact Us</a>
         </div>
         
-        <p class="text-center mt-4">Copyright, MIN</p>
+        <!-- <p class="text-center mt-4">Copyright, MIN</p> -->
     </div>
-    
+{% include 'footer.html' %}  
 
 </body>
 </html>
